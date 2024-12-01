@@ -11,9 +11,9 @@
     <h1><a href="/">Unsere Hochzeit</a></h1>
     <nav>
         <ul>
-            <li><a href="/">Startseite</a></li>
-            <li><a href="/about/">Details</a></li>
-            <li><a href="/gallery/">Galerie</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -27,8 +27,15 @@
     if (token !== secretToken) {
         alert("Kein Zugriff erlaubt! Bitte den QR-Code oder den korrekten Link verwenden.");
         window.location.href = "https://google.com";
+    } else {
+        document.querySelectorAll('a').forEach(link => {
+            const href = new URL(link.href, window.location.origin);
+            href.searchParams.set('token', token);
+            link.href = href.toString();
+        });
     }
 </script>
+
     <main>
         <h1 id="willkommen-zu-unserer-hochzeit">Willkommen zu unserer Hochzeit!</h1>
 
