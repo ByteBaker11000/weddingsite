@@ -18,6 +18,17 @@
     </nav>
 </header>
 
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get("token");
+
+    const secretToken = "geheimesPasswort";
+
+    if (token !== secretToken) {
+        alert("Kein Zugriff erlaubt! Bitte den QR-Code oder den korrekten Link verwenden.");
+        window.location.href = "https://google.com";
+    }
+</script>
     <main>
         <h1 id="anmeldung-zur-hochzeit">Anmeldung zur Hochzeit</h1>
 
