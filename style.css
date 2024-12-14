@@ -4,20 +4,19 @@ body, html {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  height: 100%;
-  background-color: #f8e9e6; /* Rosé-Ton */
+  background-color: #f8e9e6; /* Roséfarbener Hintergrund */
   color: #4a4a4a;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-/* Hero Section */
+/* Hero-Bereich */
 .hero {
   height: 100vh;
-  background: url('background.png') no-repeat center center/cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  flex-direction: column;
   text-align: center;
   padding: 20px;
 }
@@ -75,6 +74,35 @@ body, html {
   margin: 10px 0;
 }
 
+/* Paar-Bild */
+.couple-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* Veranstaltungsort-Platzhalter */
+.location-placeholder {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 3px solid #d4af37;
+  border-radius: 15px 15px 0 0;
+}
+
+.location-placeholder h2 {
+  font-size: 2rem;
+  color: #8b5e34;
+}
+
+.location-placeholder p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-top: 10px;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .content {
@@ -96,7 +124,11 @@ body, html {
     font-size: 1.5rem;
   }
 
-  .content p {
+  .content p, .location-placeholder p {
     font-size: 0.9rem;
+  }
+
+  .couple-image {
+    max-width: 200px;
   }
 }

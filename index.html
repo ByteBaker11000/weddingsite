@@ -7,17 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Hauptbereich -->
   <div class="hero">
     <div class="countdown-circle">
-      <div id="countdown">110<br><span>Tage</span></div>
+      <div id="countdown">223<br><span>TAGE</span></div>
     </div>
     <div class="content">
       <h1>Unser Tag</h1>
       <h2>Johanna & Raphael</h2>
       <p>26. Juli 2025 &nbsp; | &nbsp; Waldsteiner Glücksgarten, Waldstein</p>
       <p>Wir können es kaum erwarten, diesen besonderen Tag mit euch zu feiern!</p>
+      <img src="couple1.png" alt="Johanna und Raphael" class="couple-image">
     </div>
   </div>
+
+  <!-- Ort Platzhalter -->
+  <section class="location-placeholder">
+    <h2>Veranstaltungsort</h2>
+    <p>Waldsteiner Glücksgarten<br>Waldstein</p>
+  </section>
+
   <script>
     // Countdown Timer
     document.addEventListener("DOMContentLoaded", () => {
@@ -27,7 +36,7 @@
         const now = new Date();
         const diff = weddingDate - now;
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        countdownElement.innerHTML = `${days}<br><span>Tage</span>`;
+        countdownElement.innerHTML = `${days}<br><span>TAGE</span>`;
       }, 1000);
     });
   </script>
