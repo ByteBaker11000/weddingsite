@@ -4,131 +4,115 @@ body, html {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  background-color: #f8e9e6; /* Roséfarbener Hintergrund */
+  background-color: #f8f3ef; /* Sanfter beige-rosé Ton */
   color: #4a4a4a;
   height: 100%;
-  overflow-x: hidden;
 }
 
-/* Hero-Bereich */
+/* Hero Header */
 .hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 20px;
-}
-
-/* Countdown-Kreis */
-.countdown-circle {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
-  background: black;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.countdown-circle span {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-/* Inhalt */
-.content {
-  background: rgba(255, 255, 255, 0.9); /* Transparente Box */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  text-align: center;
-}
-
-.content h1 {
-  font-size: 2.5rem;
-  color: #d4af37;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.content h2 {
-  font-size: 2rem;
-  margin: 10px 0;
-  color: #8b5e34;
-}
-
-.content p {
-  font-size: 1rem;
-  color: #4a4a4a;
-  margin: 10px 0;
-}
-
-/* Paar-Bild */
-.couple-image {
-  max-width: 300px;
-  height: auto;
-  border-radius: 15px;
-  margin-top: 20px;
-}
-
-/* Veranstaltungsort-Platzhalter */
-.location-placeholder {
-  background: rgba(255, 255, 255, 0.8);
   padding: 50px 20px;
-  text-align: center;
-  margin-top: 20px;
-  border-top: 3px solid #d4af37;
-  border-radius: 15px 15px 0 0;
+  background-color: #f8f3ef;
 }
 
-.location-placeholder h2 {
-  font-size: 2rem;
-  color: #8b5e34;
-}
-
-.location-placeholder p {
-  font-size: 1rem;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
   color: #4a4a4a;
+  letter-spacing: 2px;
+}
+
+.divider {
+  margin: 20px auto;
+  width: 150px;
+  border: none;
+  border-top: 2px solid #d4af37; /* Goldene Linie */
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: #4a4a4a;
+  margin: 10px 0;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.date-location {
+  font-size: 1rem;
+  color: #6a6a6a;
   margin-top: 10px;
+}
+
+.countdown-text {
+  font-size: 1rem;
+  color: #8b5e34;
+  margin-top: 5px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  background-color: #ffffff;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-bar ul li {
+  display: inline;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  color: #d4af37; /* Gold */
+}
+
+/* Bild Section */
+.image-section {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.couple-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
-  .content {
-    padding: 20px;
-    max-width: 90%;
+  .hero h1 {
+    font-size: 2.5rem;
   }
 
-  .countdown-circle {
-    width: 80px;
-    height: 80px;
-    font-size: 16px;
-  }
-
-  .content h1 {
-    font-size: 2rem;
-  }
-
-  .content h2 {
+  .hero h2 {
     font-size: 1.5rem;
   }
 
-  .content p, .location-placeholder p {
-    font-size: 0.9rem;
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .couple-image {
-    max-width: 200px;
+    max-width: 90%;
   }
 }

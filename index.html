@@ -3,40 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unsere Hochzeit</title>
+  <title>Unser Tag</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hauptbereich -->
-  <div class="hero">
-    <div class="countdown-circle">
-      <div id="countdown">223<br><span>TAGE</span></div>
-    </div>
-    <div class="content">
-      <h1>Unser Tag</h1>
-      <h2>Johanna & Raphael</h2>
-      <p>26. Juli 2025 &nbsp; | &nbsp; Waldsteiner Glücksgarten, Waldstein</p>
-      <p>Wir können es kaum erwarten, diesen besonderen Tag mit euch zu feiern!</p>
-      <img src="couple1.png" alt="Johanna und Raphael" class="couple-image">
-    </div>
-  </div>
+  <!-- Header -->
+  <header class="hero">
+    <h1>UNSER TAG</h1>
+    <hr class="divider">
+    <h2>Johanna & Raphael</h2>
+    <p class="date-location">26. Juli 2025 &nbsp; | &nbsp; Waldsteiner Glücksgarten, Waldstein</p>
+    <p class="countdown-text" id="countdown">223 Tage bis zur Hochzeit!</p>
+  </header>
 
-  <!-- Ort Platzhalter -->
-  <section class="location-placeholder">
-    <h2>Veranstaltungsort</h2>
-    <p>Waldsteiner Glücksgarten<br>Waldstein</p>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#story">Unsere Geschichte</a></li>
+      <li><a href="#location">Ort</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bild -->
+  <section class="image-section">
+    <img src="couple1.png" alt="Johanna und Raphael" class="couple-image">
   </section>
 
   <script>
     // Countdown Timer
     document.addEventListener("DOMContentLoaded", () => {
-      const weddingDate = new Date("2025-07-26T11:00:00");
+      const weddingDate = new Date("2025-07-26T00:00:00");
       const countdownElement = document.getElementById("countdown");
       setInterval(() => {
         const now = new Date();
         const diff = weddingDate - now;
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        countdownElement.innerHTML = `${days}<br><span>TAGE</span>`;
+        countdownElement.innerHTML = `${days} Tage bis zur Hochzeit!`;
       }, 1000);
     });
   </script>
