@@ -7,6 +7,7 @@ body, html {
   background-color: #f8f3ef; /* Sanfter beige-rosé Ton */
   color: #4a4a4a;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Hero Header */
@@ -97,6 +98,33 @@ body, html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Waldsteiner Glücksgarten Section */
+.wsg-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.wsg-section h2 {
+  font-size: 2rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+.wsg-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.wsg-gallery img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .hero h1 {
@@ -114,5 +142,9 @@ body, html {
 
   .couple-image {
     max-width: 90%;
+  }
+
+  .wsg-gallery img {
+    max-width: 45%; /* Anpassung für kleinere Bildschirme */
   }
 }
