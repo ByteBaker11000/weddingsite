@@ -3,92 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Willkommen zu unserer Hochzeit! Alle wichtigen Informationen zu unserem besonderen Tag.">
   <title>Unsere Hochzeit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>Willkommen zu unserer Hochzeit!</h1>
-      <nav>
-        <ul>
-          <li><a href="#details">Details</a></li>
-          <li><a href="#informationen">Informationen</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-      </nav>
+  <div class="hero">
+    <div class="countdown-circle">
+      <div id="countdown">110<br><span>Tage</span></div>
     </div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Details -->
-    <section id="details" class="section">
-      <div class="container">
-        <h2>Details zur Hochzeit</h2>
-        <ul>
-          <li><strong>Datum:</strong> 25. Mai 2024</li>
-          <li><strong>Ort:</strong> Schloss Glücksburg, Hamburg</li>
-          <li><strong>Zeit:</strong> 14:00 Uhr</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Informationen -->
-    <section id="informationen" class="section">
-      <div class="container">
-        <h2>Wichtige Informationen</h2>
-        <ol>
-          <li><strong>Datum:</strong> 26. Juli 2025</li>
-          <li><strong>Ort:</strong> Waldsteiner Glücksgarten, Waldstein</li>
-          <li><strong>Zeit:</strong> 11:00 Uhr</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Galerie -->
-    <section id="galerie" class="section">
-      <div class="container">
-        <h2>Galerie</h2>
-        <div class="gallery">
-          <img src="image1.jpg" alt="Bild 1">
-          <img src="image2.jpg" alt="Bild 2">
-          <img src="image3.jpg" alt="Bild 3">
-          <img src="image4.jpg" alt="Bild 4">
-        </div>
-      </div>
-    </section>
-
-    <!-- Countdown -->
-    <section id="countdown" class="section">
-      <div class="container">
-        <h2>Countdown zu unserem großen Tag</h2>
-        <div id="countdown-timer">Lade Countdown...</div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Unsere Hochzeit | Alle Rechte vorbehalten.</p>
-      <p>Kontakt: <a href="mailto:hochzeit@example.com">hochzeit@example.com</a></p>
+    <div class="card">
+      <h2>WIR HEIRATEN!</h2>
+      <h1>Johanna & Raphael</h1>
+      <p>26. Juli 2025</p>
+      <p>Waldsteiner Glücksgarten, Waldstein</p>
+      <p>11:00 Uhr</p>
+      <p>Willkommen!</p>
+      <p>Wir können es kaum erwarten, diesen besonderen Tag mit euch zu feiern! Diese Website enthält alle wichtigen Informationen zu unserer Hochzeit.</p>
     </div>
-  </footer>
-
+  </div>
   <script>
-    // Countdown-Script
+    // Countdown Timer
     document.addEventListener("DOMContentLoaded", () => {
-      const weddingDate = new Date("2024-05-25T14:00:00");
-      const countdown = document.getElementById('countdown-timer');
+      const weddingDate = new Date("2025-07-26T11:00:00");
+      const countdownElement = document.getElementById("countdown");
       setInterval(() => {
         const now = new Date();
         const diff = weddingDate - now;
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        countdown.innerText = `${days} Tage bis zu unserer Hochzeit!`;
+        countdownElement.innerHTML = `${days}<br><span>Tage</span>`;
       }, 1000);
     });
   </script>
