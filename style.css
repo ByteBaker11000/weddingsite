@@ -5,9 +5,11 @@ body, html {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
   height: 100%;
+  background-color: #f8e9e6; /* Rosé-Ton */
+  color: #4a4a4a;
 }
 
-/* Hintergrundbild */
+/* Hero Section */
 .hero {
   height: 100vh;
   background: url('background.png') no-repeat center center/cover;
@@ -15,21 +17,9 @@ body, html {
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-/* Karte */
-.card {
-  width: 80%;
-  height: 80%;
-  background: rgba(255, 255, 255, 0.7); /* Transparenz */
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Countdown-Kreis */
@@ -56,32 +46,40 @@ body, html {
   text-transform: uppercase;
 }
 
-/* Karte Text */
-.card h1 {
-  font-size: 2.5rem;
-  color: #8b5e34;
-  margin: 10px 0;
+/* Inhalt */
+.content {
+  background: rgba(255, 255, 255, 0.9); /* Transparente Box */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
 }
 
-.card h2 {
-  font-size: 1.2rem;
+.content h1 {
+  font-size: 2.5rem;
   color: #d4af37;
-  margin: 0;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-.card p {
+.content h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #8b5e34;
+}
+
+.content p {
   font-size: 1rem;
-  color: #333;
+  color: #4a4a4a;
   margin: 10px 0;
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
-  .card {
-    width: 90%;
-    height: 85%;
-    padding: 15px;
+  .content {
+    padding: 20px;
+    max-width: 90%;
   }
 
   .countdown-circle {
@@ -90,11 +88,15 @@ body, html {
     font-size: 16px;
   }
 
-  .card h1 {
+  .content h1 {
     font-size: 2rem;
   }
 
-  .card p {
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
     font-size: 0.9rem;
   }
 }
